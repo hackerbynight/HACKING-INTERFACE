@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>System Access</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="panel">
+  <h2>SECURITY CHALLENGE</h2>
+  <p>VERIFY ACCESS KEY</p>
+
+  <p class="puzzle">12 × 7 = ?</p>
+
+  <input id="ans" placeholder="ENTER CODE">
+  <button onclick="check()">SUBMIT</button>
+
+  <p id="out"></p>
+</div>
+
+<script>
+const creators = [
+  { name: "Alex Storm", info: "Independent software engineer · Berlin" },
+  { name: "Nova Byte", info: "Cyber systems researcher · Canada" },
+  { name: "ZeroX", info: "Anonymous network architect · Unknown" },
+  { name: "Luna Code", info: "Frontend & security designer · UK" },
+  { name: "Phantom Dev", info: "Full-stack developer · Encrypted profile" }
+];
+
+function check() {
+  const out = document.getElementById("out");
+  const answer = document.getElementById("ans").value;
+
+  if (answer === "84") {
+    const random = creators[Math.floor(Math.random() * creators.length)];
+
+    out.innerHTML = `
+      <span class="success">✔ HACKING SUCCESSFUL</span><br><br>
+      🔓 SYSTEM ACCESS GRANTED<br><br>
+      👤 CREATOR (FAKE): <b>${random.name}</b><br>
+      📄 INFO: ${random.info}<br><br>
+      ⚠️ THIS IS A FAKE HACKING SIMULATION
+    `;
+  } else {
+    out.innerHTML = `
+      <span class="fail">✖ HACKING FAILED</span><br><br>
+      INVALID ACCESS KEY
+    `;
+  }
+}
+</script>
+
+</body>
+</html>

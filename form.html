@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Target Input</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="panel">
+  <h2>TARGET INFORMATION</h2>
+
+  <input id="domain" placeholder="TARGET DOMAIN (FAKE)">
+  <input id="name" placeholder="OPERATOR NAME">
+
+  <button onclick="go()">PROCEED</button>
+</div>
+
+<script>
+  function go() {
+    localStorage.setItem("domain", domain.value);
+    localStorage.setItem("name", name.value);
+    window.location.href = "hack.html";
+  }
+</script>
+
+</body>
+</html>
