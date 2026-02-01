@@ -39,3 +39,5 @@ Be responsible.
 Or leave.
 
 No warnings. No hand-holding.
+
+if you want credit in a project put my name next to yours.
